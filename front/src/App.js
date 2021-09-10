@@ -1,3 +1,4 @@
+import Intro from "components/Intro";
 import Navbar from "components/Navbar";
 import styled from "styled-components";
 
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <Container>
       <Navbar />
+      <Intro />
     </Container>
   );
 };

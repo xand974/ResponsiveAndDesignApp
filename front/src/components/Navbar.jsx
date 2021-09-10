@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const Nav = styled.div`
-  height: 50px;
+  height: 60px;
 `;
 
 const Wrapper = styled.div`
