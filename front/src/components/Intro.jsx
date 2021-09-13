@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import imgSource from "../images/gameboy.png";
 
 const Container = styled.div`
   height: calc(100vh - 60px);
   width: 100%;
   display: flex;
   padding: 20px;
+  margin-top: 100px;
 `;
 
 const Left = styled.div`
@@ -32,12 +34,45 @@ const Info = styled.div`
   width: 60%;
   display: flex;
   align-items: center;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: space-between;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+  padding: 15px 25px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+`;
+
+const Contact = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ContactText = styled.p`
+  color: gray;
+  font-size: 20px;
+`;
+
+const Phone = styled.p`
+  color: #b35f72;
+  font-weight: bold;
+  font-size: 20px;
+`;
 
 const Right = styled.div`
   width: 40%;
+`;
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export default function Intro() {
@@ -52,10 +87,15 @@ export default function Intro() {
         </Description>
         <Info>
           <Button>DOWNLOAD</Button>
-          <Button>START</Button>
+          <Contact>
+            <Phone>Contactez-nous (+33) 123 - 654125</Phone>
+            <ContactText>Pour toute question</ContactText>
+          </Contact>
         </Info>
       </Left>
-      <Right>Right</Right>
+      <Right>
+        <Image src={imgSource} />
+      </Right>
     </Container>
   );
 }

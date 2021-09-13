@@ -33,6 +33,7 @@ const Item = styled.li`
   font-weight: bold;
   font-size: 20px;
   color: gray;
+  cursor: pointer;
 `;
 
 const Button = styled.button`
