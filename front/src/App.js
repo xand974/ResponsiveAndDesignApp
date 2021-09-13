@@ -1,6 +1,7 @@
 import Feature from "components/Feature";
 import Intro from "components/Intro";
 import Navbar from "components/Navbar";
+import Service from "components/Service";
 import styled, { css } from "styled-components";
 
 const Container = styled.div`
@@ -28,7 +29,11 @@ const FeatureShape = styled.div`
   background: #ffa8b8;
   clip-path: polygon(0 0, 56% 0%, 100% 100%, 56% 100%);
 `;
-
+const ServiceShape = styled.div`
+  background: #002d3d;
+  clip-path: polygon(0 0, 40% 0, 40% 100%, 0% 100%);
+  ${IntoShape}
+`;
 const App = () => {
   return (
     <>
@@ -40,6 +45,10 @@ const App = () => {
       <Container>
         <FeatureShape />
         <Feature />
+      </Container>
+      <Container>
+        <Service />
+        <ServiceShape />
       </Container>
     </>
   );
