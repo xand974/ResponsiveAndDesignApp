@@ -1,3 +1,4 @@
+import Feature from "components/Feature";
 import Intro from "components/Intro";
 import Navbar from "components/Navbar";
 import styled from "styled-components";
@@ -20,11 +21,16 @@ const Shape = styled.div`
 
 const App = () => {
   return (
-    <Container>
-      <Shape />
-      <Navbar />
-      <Intro />
-    </Container>
+    <>
+      <Container>
+        <Shape />
+        <Navbar />
+        <Intro />
+      </Container>
+      <Container>
+        <Feature />
+      </Container>
+    </>
   );
 };
 

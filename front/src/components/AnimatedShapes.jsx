@@ -11,6 +11,7 @@ const Square = styled.div`
   left: -60px;
   top: -60px;
   animation: square 25s linear infinite alternate;
+  box-shadow: 0 0 10px white;
 
   @keyframes square {
     0%,
