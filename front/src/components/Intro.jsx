@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imgSource from "../images/gameboy.png";
+import AnimatedShapes from "./AnimatedShapes";
 
 const Container = styled.div`
   height: calc(100vh - 60px);
@@ -96,6 +97,7 @@ export default function Intro() {
       <Right>
         <Image src={imgSource} />
       </Right>
+      <AnimatedShapes />
     </Container>
   );
 }

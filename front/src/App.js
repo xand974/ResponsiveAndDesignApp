@@ -8,7 +8,7 @@ const Container = styled.div`
   position: relative;
 `;
 const Shape = styled.div`
-  background: #5a0413;
+  background: #0d3f66;
   clip-path: polygon(78% 0, 100% 0, 100% 100%, 56% 100%);
   z-index: -1;
   position: absolute;
