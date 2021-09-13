@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imageSrc from "../images/Cyber.png";
+import InfoCard from "components/InfoCard";
 
 const Container = styled.div`
   height: 100vh;
@@ -41,8 +42,20 @@ const Video = styled.video``;
 
 const CardContainer = styled.div`
   display: flex;
-  justify-content: space-space-between;
+  justify-content: space-between;
   margin-top: 30px;
+`;
+const Button = styled.button`
+  width: 300px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background: #0000ff;
+  padding: 20px 30px;
+  margin-top: 50px;
+  font-size: 20px;
 `;
 
 export default function Service() {
@@ -55,12 +68,19 @@ export default function Service() {
         <Wrapper>
           <Title>Ne craignez rien...</Title>
           <Description>
-            Nous ne stockons aucune donnée et vous promet une expérience
-            utilisateur plus que satisfaisante. Vous pouvez résilier votre
-            compte à tout moment, pour quelque raison que ce soit, en suivant
-            les instructions dans les « Paramètres » du Service.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
+            reprehenderit tempora placeat tenetur illum magni blanditiis maxime
+            tempore ipsum alias voluptates, eius dicta optio dolore deserunt,
+            modi ex harum odit. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Qui optio aut commodi quas porro tenetur quaerat
+            dignissimos corrupti neque veritatis?
           </Description>
-          <CardContainer></CardContainer>
+          <CardContainer>
+            <InfoCard />
+            <InfoCard />
+            <InfoCard />
+          </CardContainer>
+          <Button>EN SAVOIR +</Button>
         </Wrapper>
       </Right>
     </Container>
