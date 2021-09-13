@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import imageSrc from "../images/Cyber.png";
 import InfoCard from "components/InfoCard";
+import Play from "../images/play.png";
 
 const Container = styled.div`
   height: 100vh;
@@ -30,7 +31,7 @@ const Title = styled.h1`
 
 const Description = styled.p`
   font-size: 20px;
-  margin-top: 30px;
+  margin-top: 50px;
   color: #565656;
 `;
 
@@ -43,10 +44,10 @@ const Video = styled.video``;
 const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 100px;
 `;
 const Button = styled.button`
-  width: 300px;
+  width: 400px;
   border: none;
   border-radius: 10px;
   color: white;
@@ -54,8 +55,16 @@ const Button = styled.button`
   cursor: pointer;
   background: #0000ff;
   padding: 20px 30px;
-  margin-top: 50px;
+  margin-top: 80px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Icon = styled.img`
+  width: 30px;
+  margin-right: 10px;
 `;
 
 export default function Service() {
@@ -80,7 +89,9 @@ export default function Service() {
             <InfoCard />
             <InfoCard />
           </CardContainer>
-          <Button>EN SAVOIR +</Button>
+          <Button>
+            <Icon src={Play} /> EN SAVOIR +
+          </Button>
         </Wrapper>
       </Right>
     </Container>
