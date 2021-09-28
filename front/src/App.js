@@ -12,6 +12,12 @@ const Container = styled.div`
   overflow: hidden;
   position: relative;
 `;
+
+const FooterContainer = styled.footer`
+  height: 10vh;
+  overflow: hidden;
+  position: relative;
+`;
 const IntoShape = css`
   z-index: -1;
   position: absolute;
@@ -66,9 +72,9 @@ const App = () => {
       <Container>
         <Contact />
       </Container>
-      <Container>
+      <FooterContainer>
         <Footer />
-      </Container>
+      </FooterContainer>
     </>
   );
 };
