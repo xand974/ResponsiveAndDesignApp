@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import imageSrc from "../images/Cyber.png";
 import InfoCard from "components/InfoCard";
@@ -13,6 +13,9 @@ const Container = styled.div`
 const Left = styled.div`
   display: flex;
   width: 50%;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 `;
 
 const Right = styled.div`
@@ -37,9 +40,16 @@ const Description = styled.p`
 
 const Image = styled.img`
   width: 100%;
+  display: ${(props) => props.open && "none"};
 `;
 
-const Video = styled.video``;
+const Video = styled.video`
+  display: ${(props) => !props.open && "none"};
+  width: 90%;
+  height: 300px;
+  box-shadow: 0 0 20px black;
+  object-fit: cover;
+`;
 
 const CardContainer = styled.div`
   display: flex;
@@ -68,10 +78,17 @@ const Icon = styled.img`
 `;
 
 export default function Service() {
+  const [open, setOpen] = useState(false);
   return (
     <Container>
       <Left>
-        <Image src={imageSrc} />
+        <Image open={open} src={imageSrc} />
+        <Video
+          autoPlay
+          loop
+          open={open}
+          src="https://vod-progressive.akamaized.net/exp=1632836615~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4545%2F18%2F472726684%2F2106055564.mp4~hmac=45287c5e00b85aa8c9927e6350d00cb76c7ace02e92b66708e7fc54ab99723f1/vimeo-prod-skyfire-std-us/01/4545/18/472726684/2106055564.mp4?filename=Fog+-+53358.mp4"
+        />
       </Left>
       <Right>
         <Wrapper>
@@ -89,7 +106,11 @@ export default function Service() {
             <InfoCard />
             <InfoCard />
           </CardContainer>
-          <Button>
+          <Button
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
             <Icon src={Play} /> EN SAVOIR +
           </Button>
         </Wrapper>
