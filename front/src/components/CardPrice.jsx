@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const CardPrice = styled.div`
   position: relative;
+
   padding: 20px;
   width: 300px;
   height: 500px;
@@ -12,7 +13,9 @@ const CardPrice = styled.div`
   flex-direction: column;
   align-items: center;
 
-  box-shadow: 0 0 10px black;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gray;
 `;
 
 const SubscriptionText = styled.h3`

@@ -1,4 +1,6 @@
+import Contact from "components/Contact";
 import Feature from "components/Feature";
+import Footer from "components/Footer";
 import Intro from "components/Intro";
 import Navbar from "components/Navbar";
 import Price from "components/Price";
@@ -60,6 +62,12 @@ const App = () => {
       <Container>
         <Price />
         <PriceShape />
+      </Container>
+      <Container>
+        <Contact />
+      </Container>
+      <Container>
+        <Footer />
       </Container>
     </>
   );
