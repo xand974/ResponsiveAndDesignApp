@@ -9,6 +9,9 @@ const Container = styled.div`
   display: flex;
   padding: 20px;
   margin-top: 100px;
+  @media only screen and (max-width: 1650px) {
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
@@ -17,18 +20,29 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 1650px) {
+    width: 100%;
+    padding: 10px;
+  }
 `;
 
 const Title = styled.h1`
   width: 60%;
 
   font-size: 60px;
+  @media only screen and (max-width: 1650px) {
+    font-size: 40px;
+    width: 100%;
+  }
 `;
 
 const Description = styled.p`
   margin-top: 20px;
   width: 60%;
   font-size: 20px;
+  @media only screen and (max-width: 1650px) {
+    width: 100%;
+  }
 `;
 
 const Info = styled.div`
@@ -38,6 +52,10 @@ const Info = styled.div`
   margin-top: 50px;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1650px) {
+    width: 100%;
+  }
 `;
 
 const Button = styled.button`
@@ -49,6 +67,11 @@ const Button = styled.button`
   font-weight: bold;
   letter-spacing: 2px;
   cursor: pointer;
+
+  @media only screen and (max-width: 1650px) {
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
 `;
 
 const Contact = styled.div`
@@ -59,16 +82,25 @@ const Contact = styled.div`
 const ContactText = styled.p`
   color: gray;
   font-size: 20px;
+  @media only screen and (max-width: 1650px) {
+    font-size: 18px;
+  }
 `;
 
 const Phone = styled.p`
   color: #b35f72;
   font-weight: bold;
   font-size: 20px;
+  @media only screen and (max-width: 1650px) {
+    font-size: 17px;
+  }
 `;
 
 const Right = styled.div`
   width: 40%;
+  @media only screen and (max-width: 1650px) {
+    width: 100%;
+  }
 `;
 const Image = styled.img`
   width: 100%;

@@ -25,23 +25,37 @@ const Shape = styled.div`
   ${IntoShape}
   background: #0d3f66;
   clip-path: polygon(78% 0, 100% 0, 100% 100%, 56% 100%);
+  @media only screen and (max-width: 400px) {
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 65% 100%);
+  }
 `;
 
 const FeatureShape = styled.div`
   ${IntoShape}
   background: #ffa8b8;
   clip-path: polygon(0 0, 56% 0%, 100% 100%, 56% 100%);
+
+  @media only screen and (max-width: 400px) {
+    clip-path: polygon(0% 0, 65% 0, 65% 100%, 0% 100%);
+  }
 `;
 const ServiceShape = styled.div`
   background: #002d3d;
   clip-path: polygon(0 0, 40% 0, 40% 100%, 0% 100%);
   ${IntoShape}
+  @media only screen and (max-width: 1650px) {
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 65% 100%);
+  }
 `;
 
 const PriceShape = styled.div`
   ${IntoShape}
   background-color: #ffc9d3;
   clip-path: polygon(40% 0, 100% 0, 100% 100%, 71% 100%);
+
+  @media only screen and (max-width: 1650px) {
+    clip-path: polygon(0% 0, 65% 0, 65% 100%, 0% 100%);
+  }
 `;
 const App = () => {
   return (

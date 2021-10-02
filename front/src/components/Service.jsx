@@ -6,8 +6,11 @@ import Play from "../images/play.png";
 
 const Container = styled.div`
   height: 100vh;
-
+  position: relative;
   display: flex;
+  @media only screen and (max-width: 1650px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const Left = styled.div`
@@ -16,31 +19,53 @@ const Left = styled.div`
   justify-content: center;
   height: 100vh;
   align-items: center;
+  @media only screen and (max-width: 1650px) {
+    width: 100%;
+  }
 `;
 
 const Right = styled.div`
   display: flex;
   width: 50%;
+  @media only screen and (max-width: 1650px) {
+    width: 100%;
+  }
 `;
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 1650px) {
+    padding: 35px 20px;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 70px;
+
+  @media only screen and (max-width: 1650px) {
+    font-size: 40px;
+  }
 `;
 
 const Description = styled.p`
   font-size: 20px;
   margin-top: 50px;
   color: #565656;
+  @media only screen and (max-width: 1650px) {
+    font-size: 17px;
+    width: 100%;
+    margin-top: 20px;
+    color: gray;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
   display: ${(props) => props.open && "none"};
+  @media only screen and (max-width: 1650px) {
+    display: none;
+  }
 `;
 
 const Video = styled.video`
@@ -49,12 +74,23 @@ const Video = styled.video`
   height: 300px;
   box-shadow: 0 0 20px black;
   object-fit: cover;
+  @media only screen and (max-width: 1650px) {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
+
+  @media only screen and (max-width: 1650px) {
+    width: 100%;
+    display: ${(props) => props.open && "none"};
+  }
 `;
 const Button = styled.button`
   width: 400px;
@@ -70,6 +106,12 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 1650px) {
+    width: 60%;
+    padding: 10px;
+    font-size: 14px;
+    margin: 50px auto;
+  }
 `;
 
 const Icon = styled.img`
@@ -87,7 +129,7 @@ export default function Service() {
           autoPlay
           loop
           open={open}
-          src="https://vod-progressive.akamaized.net/exp=1632836615~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4545%2F18%2F472726684%2F2106055564.mp4~hmac=45287c5e00b85aa8c9927e6350d00cb76c7ace02e92b66708e7fc54ab99723f1/vimeo-prod-skyfire-std-us/01/4545/18/472726684/2106055564.mp4?filename=Fog+-+53358.mp4"
+          src="https://assets.mixkit.co/videos/preview/mixkit-fly-over-a-huge-canyon-covered-in-vegetation-41401-large.mp4"
         />
       </Left>
       <Right>
@@ -101,7 +143,7 @@ export default function Service() {
             adipisicing elit. Qui optio aut commodi quas porro tenetur quaerat
             dignissimos corrupti neque veritatis?
           </Description>
-          <CardContainer>
+          <CardContainer open={open}>
             <InfoCard />
             <InfoCard />
             <InfoCard />

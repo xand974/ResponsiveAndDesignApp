@@ -8,6 +8,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 1650px) {
+    padding: 30px 20px;
+  }
 `;
 
 const Left = styled.div`
@@ -26,6 +29,9 @@ const Logo = styled.h1`
 const Menu = styled.ul`
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 1650px) {
+    display: none;
+  }
 `;
 const Item = styled.li`
   margin: 0px 10px;

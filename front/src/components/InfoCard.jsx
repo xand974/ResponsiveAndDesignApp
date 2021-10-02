@@ -11,15 +11,26 @@ const Container = styled.div`
   height: 150px;
   box-shadow: 0 0 20px #ffbfbf;
   align-items: center;
+
+  @media only screen and (max-width: 1650px) {
+    width: 100px;
+  }
 `;
 
 const Image = styled.img`
   width: 30px;
+
+  @media only screen and (max-width: 1650px) {
+    width: 20px;
+  }
 `;
 
 const Text = styled.p`
   margin-top: 10px;
   text-align: center;
+  @media only screen and (max-width: 1650px) {
+    font-size: 12px;
+  }
 `;
 
 export default function InfoCard() {

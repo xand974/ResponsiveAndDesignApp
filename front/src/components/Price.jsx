@@ -7,6 +7,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 1650px) {
+    flex-direction: column;
+  }
 `;
 
 export default function Price() {

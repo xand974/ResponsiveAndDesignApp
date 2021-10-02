@@ -37,6 +37,10 @@ const Circle = styled.div`
   animation: circle 40s linear infinite alternate;
   box-shadow: 0 0 10px white;
 
+  @media only screen and (max-width: 1650px) {
+    display: none;
+  }
+
   @keyframes circle {
     0%,
     100% {
