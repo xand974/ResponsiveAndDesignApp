@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { tablet } from "responsive";
 
 const Square = styled.div`
   width: 60px;
@@ -36,10 +37,7 @@ const Circle = styled.div`
   left: 0;
   animation: circle 40s linear infinite alternate;
   box-shadow: 0 0 10px white;
-
-  @media only screen and (max-width: 1650px) {
-    display: none;
-  }
+  ${tablet({ display: "none" })}
 
   @keyframes circle {
     0%,

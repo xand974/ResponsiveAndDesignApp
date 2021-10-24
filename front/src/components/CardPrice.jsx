@@ -17,7 +17,7 @@ const CardPrice = styled.div`
   border-radius: 10px;
   box-shadow: 0 0 10px gray;
 
-  @media only screen and (max-width: 1650px) {
+  @media only screen and (max-width: 800px) {
     width: 90%;
     height: 200px;
     margin: 20px 0;
@@ -33,7 +33,7 @@ const SubscriptionText = styled.h3`
   font-size: 20px;
   font-weight: lighter;
 
-  @media only screen and (max-width: 1650px) {
+  @media only screen and (max-width: 800px) {
     font-size: 15px;
     margin-bottom: 10px;
   }
@@ -42,7 +42,7 @@ const NumberText = styled.span`
   font-size: 50px;
   font-weight: bold;
 
-  @media only screen and (max-width: 1650px) {
+  @media only screen and (max-width: 800px) {
     font-size: 30px;
   }
 `;
@@ -59,7 +59,7 @@ const Button = styled.button`
   color: red;
   cursor: pointer;
 
-  @media only screen and (max-width: 1650px) {
+  @media only screen and (max-width: 800px) {
     padding: 5px;
     margin-bottom: 10px;
     font-size: 12px;
@@ -75,7 +75,7 @@ const Infotext = styled.p`
   font-size: 18px;
   margin-bottom: 20px;
 
-  @media only screen and (max-width: 1650px) {
+  @media only screen and (max-width: 800px) {
     font-size: 13px;
     margin-bottom: 10px;
   }
@@ -98,7 +98,7 @@ const JoinButton = styled.button`
   padding: 10px 20px;
 
   font-size: 18px;
-  @media only screen and (max-width: 1650px) {
+  @media only screen and (max-width: 800px) {
     padding: 10px;
     font-size: 15px;
     top: 0;
