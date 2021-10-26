@@ -1,3 +1,8 @@
+import {
+  CalendarTodayOutlined,
+  FavoriteBorder,
+  InfoOutlined,
+} from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
 
@@ -9,6 +14,7 @@ const Container = styled.div`
   display: flex;
 
   border-top: 1px solid lightgray;
+  flex-direction: column;
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -21,17 +27,36 @@ const Wrapper = styled.div`
 
 const FooterContent = styled.span`
   margin-right: 20px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 0.8rem;
+  }
+`;
+
+const CreditText = styled.span`
+  text-align: center;
+  color: #a3a3a3;
+  margin-bottom: 5px;
+  @media screen and (max-width: 400px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export default function Footer() {
   return (
     <Container>
       <Wrapper>
-        <FooterContent>2021 - Alexandre Malet</FooterContent>
-        <FooterContent>2021 - Alexandre Malet</FooterContent>
-        <FooterContent>2021 - Alexandre Malet</FooterContent>
-        <FooterContent>2021 - Alexandre Malet</FooterContent>
+        <FooterContent>
+          <InfoOutlined style={{ fontSize: "25px" }} />
+        </FooterContent>
+        <FooterContent>
+          <CalendarTodayOutlined style={{ fontSize: "25px" }} />
+        </FooterContent>
+        <FooterContent>
+          <FavoriteBorder style={{ fontSize: "25px" }} />
+        </FooterContent>
       </Wrapper>
+      <CreditText>2021 - Alexandre Malet</CreditText>
     </Container>
   );
 }

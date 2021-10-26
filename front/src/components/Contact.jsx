@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-
+import { mobile, tablet } from "responsive";
 const Container = styled.div`
   display: flex;
   height: 100vh;
+
+  ${mobile({ flexDirection: "column", width: "100%" })}
 `;
 
 const Left = styled.div`
@@ -11,12 +13,20 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${mobile({ width: "100%" })}
 `;
 
 const Wrapper = styled.div`
   height: 50%;
   width: 90%;
   padding: 0 30px;
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+  }
 `;
 
 const QuestionText = styled.h1`
@@ -24,10 +34,21 @@ const QuestionText = styled.h1`
   font-weight: bold;
   width: 50%;
   margin-bottom: 20px;
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+  }
 `;
 
 const Form = styled.form`
   display: flex;
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 const InputWrapper = styled.div`
   display: flex;
@@ -40,16 +61,22 @@ const Input = styled.input`
   padding: 20px;
   outline: none;
   margin: 20px;
-  width: 100%;
+
+  @media screen and (max-width: 400px) {
+    padding: 10px;
+  }
 `;
 const TextArea = styled.textarea`
   margin: 20px 40px;
   padding: 20px;
   height: 200px;
-  width: 100%;
 
   resize: none;
   outline: none;
+
+  @media screen and (max-width: 400px) {
+    margin: 20px 20px;
+  }
 `;
 
 const SendButton = styled.button`
@@ -66,6 +93,11 @@ const SendButton = styled.button`
   font-size: 18px;
 
   cursor: pointer;
+
+  @media screen and (max-width: 400px) {
+    width: 90%;
+    margin: 20px auto;
+  }
 `;
 
 const Right = styled.div`
@@ -74,6 +106,9 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media screen and (max-width: 400px) {
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -82,6 +117,10 @@ const TextWrapper = styled.div`
 
   display: flex;
   align-items: center;
+  @media screen and (max-width: 400px) {
+    width: 80%;
+    margin: auto;
+  }
 `;
 
 const Logo = styled.img`
@@ -89,10 +128,19 @@ const Logo = styled.img`
   height: 40px;
   margin-right: 10px;
   object-fit: cover;
+  @media screen and (max-width: 400px) {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 5px;
+  }
 `;
 
 const TextInfo = styled.p`
   font-size: 20px;
+  @media screen and (max-width: 400px) {
+    font-size: 0.75rem;
+    color: #a3a3a3;
+  }
 `;
 
 export default function Contact() {
@@ -130,7 +178,7 @@ export default function Contact() {
         </TextWrapper>
         <TextWrapper>
           <Logo src="https://pic.clubic.com/v1/images/1774822/raw?fit=smartCrop&height=900&width=900&hash=89abf740dc5a3b64bd730634497645fa2595a537" />{" "}
-          <TextInfo>xand974@gmail.com github : xand974</TextInfo>
+          <TextInfo>xand974@gmail.com | github : xand974</TextInfo>
         </TextWrapper>
       </Right>
     </Container>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imageSrc from "../images/search.png";
-
+import { mobile, tablet } from "responsive";
 const Container = styled.div`
   padding: 30px;
   width: 200px;
@@ -12,25 +12,20 @@ const Container = styled.div`
   box-shadow: 0 0 20px #ffbfbf;
   align-items: center;
 
-  @media only screen and (max-width: 1650px) {
-    width: 100px;
-  }
+  ${mobile({ width: "100px" })}
 `;
 
 const Image = styled.img`
   width: 30px;
 
-  @media only screen and (max-width: 1650px) {
-    width: 20px;
-  }
+  ${mobile({ width: "20px" })}
 `;
 
 const Text = styled.p`
   margin-top: 10px;
   text-align: center;
-  @media only screen and (max-width: 1650px) {
-    font-size: 12px;
-  }
+
+  ${mobile({ fontSize: "12px", textAlign: "left" })}
 `;
 
 export default function InfoCard() {

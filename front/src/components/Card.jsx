@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { mobile, tablet } from "responsive";
 const CardPrice = styled.div`
   position: relative;
 
@@ -17,11 +17,7 @@ const CardPrice = styled.div`
   border-radius: 10px;
   box-shadow: 0 0 10px gray;
 
-  @media only screen and (max-width: 800px) {
-    width: 90%;
-    height: 200px;
-    margin: 20px 0;
-  }
+  ${mobile({ width: "90%", height: "200px", margin: "20px 0" })}
 `;
 
 const SubscriptionText = styled.h3`
@@ -33,18 +29,13 @@ const SubscriptionText = styled.h3`
   font-size: 20px;
   font-weight: lighter;
 
-  @media only screen and (max-width: 800px) {
-    font-size: 15px;
-    margin-bottom: 10px;
-  }
+  ${mobile({ fontSize: "15px", marginBottom: "10px" })}
 `;
 const NumberText = styled.span`
   font-size: 50px;
   font-weight: bold;
 
-  @media only screen and (max-width: 800px) {
-    font-size: 30px;
-  }
+  ${mobile({ fontSize: "30px" })}
 `;
 
 const Button = styled.button`
@@ -59,11 +50,7 @@ const Button = styled.button`
   color: red;
   cursor: pointer;
 
-  @media only screen and (max-width: 800px) {
-    padding: 5px;
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
+  ${mobile({ padding: "5px", marginBottom: "10px", fontSize: "12px" })}
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -75,10 +62,7 @@ const Infotext = styled.p`
   font-size: 18px;
   margin-bottom: 20px;
 
-  @media only screen and (max-width: 800px) {
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
+  ${mobile({ fontSize: "13px", marginBottom: "10px" })}
 `;
 
 const JoinButton = styled.button`
@@ -98,17 +82,18 @@ const JoinButton = styled.button`
   padding: 10px 20px;
 
   font-size: 18px;
-  @media only screen and (max-width: 800px) {
-    padding: 10px;
-    font-size: 15px;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    font-weight: lighter;
-    border-radius: 50%;
-  }
+
+  ${mobile({
+    padding: "10px",
+    fontSize: "15px",
+    top: 0,
+    right: 0,
+    width: "50px",
+    height: "50px",
+    backgroundColor: "black",
+    fontWeight: "lighter",
+    borderRadius: "50%",
+  })}
 `;
 export default function Card({ price, type }) {
   return (
