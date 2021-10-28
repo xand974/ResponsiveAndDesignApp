@@ -8,12 +8,12 @@ const Container = styled.div`
   height: 100vh;
   align-items: center;
 
-  ${mobile({ flexDirection: "column-reverse", padding: "20px 20px 0 20px" })}
+  ${tablet({ flexDirection: "column-reverse", padding: "20px 20px 0 20px" })}
 `;
 
 const Left = styled.div`
   width: 50%;
-  ${mobile({ width: "100%" })}
+  ${tablet({ width: "100%" })}
 `;
 
 const Right = styled.div`
@@ -21,17 +21,21 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  ${mobile({ width: "100%" })}
+  ${tablet({ width: "100%" })}
 `;
 
 const Image = styled.img`
   height: 100%;
   object-fit: cover;
+  ${tablet({ height: "35rem" })}
+
   ${mobile({ height: "400px" })}
 `;
 
 const Title = styled.span`
   font-size: 70px;
+  ${tablet({ fontSize: "4rem", textAlign: "center" })}
+
   ${mobile({ fontSize: "40px" })}
 `;
 const Subtitle = styled.span`
@@ -39,12 +43,15 @@ const Subtitle = styled.span`
   font-style: italic;
   color: #383838;
   margin-top: 30px;
-  ${mobile({ width: "100%", marginTop: "20px", fontSize: "20px" })}
+  ${tablet({ width: "100%", fontSize: "1.8rem" })}
+
+  ${mobile({ marginTop: "20px", fontSize: "20px" })}
 `;
 const Description = styled.p`
   font-size: 20px;
   margin-top: 30px;
   color: #565656;
+  ${tablet({ width: "100%", fontSize: "1.5rem" })}
 
   ${mobile({ width: "100%", marginTop: "20px", fontSize: "17px" })}
 `;
@@ -59,12 +66,9 @@ const Button = styled.button`
   border-radius: 15px;
   font-weight: bold;
   cursor: pointer;
+  ${tablet({ width: "60%", margin: "30px auto", fontSize: "1.6rem" })}
+
   ${mobile({ width: "150px", margin: "20px auto", fontSize: "15px" })}
-  @media only screen and (max-width: 1650px) {
-    width: 150px;
-    font-size: 15px;
-    margin: 20px auto;
-  }
 `;
 
 export default function Feature() {

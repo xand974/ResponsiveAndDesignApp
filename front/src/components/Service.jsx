@@ -9,7 +9,8 @@ const Container = styled.div`
   height: 100vh;
   position: relative;
   display: flex;
-  ${mobile({ flexDirection: "column-reverse" })}
+
+  ${tablet({ flexDirection: "column-reverse" })}
 `;
 
 const Left = styled.div`
@@ -24,7 +25,7 @@ const Left = styled.div`
 const Right = styled.div`
   display: flex;
   width: 50%;
-  ${mobile({ width: "100%" })}
+  ${tablet({ width: "100%" })}
 `;
 const Wrapper = styled.div`
   padding: 50px;
@@ -54,8 +55,7 @@ const Description = styled.p`
 const Image = styled.img`
   width: 100%;
   display: ${(props) => props.open && "none"};
-
-  ${mobile({ display: "none" })}
+  ${tablet({ display: "none" })}
 `;
 
 const Video = styled.video`
@@ -65,7 +65,7 @@ const Video = styled.video`
   box-shadow: 0 0 20px black;
   object-fit: cover;
 
-  ${mobile({
+  ${tablet({
     position: "absolute",
     top: "75%",
     left: "50%",
@@ -94,7 +94,7 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
 
-  ${mobile({
+  ${tablet({
     fontSize: "14px",
     width: "60%",
     padding: "10px",

@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   height: 100vh;
 
-  ${mobile({ flexDirection: "column", width: "100%" })}
+  ${tablet({ flexDirection: "column", width: "100%" })}
 `;
 
 const Left = styled.div`
@@ -21,12 +21,7 @@ const Wrapper = styled.div`
   height: 50%;
   width: 90%;
   padding: 0 30px;
-
-  @media screen and (max-width: 400px) {
-    width: 100%;
-    padding: 0;
-    height: 100%;
-  }
+  ${mobile({ width: "100%", padding: 0, height: "100%" })}
 `;
 
 const QuestionText = styled.h1`
@@ -34,21 +29,18 @@ const QuestionText = styled.h1`
   font-weight: bold;
   width: 50%;
   margin-bottom: 20px;
-  @media screen and (max-width: 400px) {
-    width: 100%;
-    padding: 0;
-    margin: 20px 0;
-    text-align: center;
-  }
+  ${tablet({
+    width: "100%",
+    padding: 0,
+    margin: "20px 0",
+    textAlign: "center",
+  })}
 `;
 
 const Form = styled.form`
   display: flex;
 
-  @media screen and (max-width: 400px) {
-    flex-direction: column;
-    width: 100%;
-  }
+  ${tablet({ width: "100%", flexDirection: "column" })}
 `;
 const InputWrapper = styled.div`
   display: flex;
@@ -61,10 +53,7 @@ const Input = styled.input`
   padding: 20px;
   outline: none;
   margin: 20px;
-
-  @media screen and (max-width: 400px) {
-    padding: 10px;
-  }
+  ${tablet({ padding: "10px" })}
 `;
 const TextArea = styled.textarea`
   margin: 20px 40px;
@@ -73,10 +62,8 @@ const TextArea = styled.textarea`
 
   resize: none;
   outline: none;
-
-  @media screen and (max-width: 400px) {
-    margin: 20px 20px;
-  }
+  ${tablet({ height: "5rem" })}
+  ${tablet({ margin: "20px" })}
 `;
 
 const SendButton = styled.button`
@@ -93,11 +80,7 @@ const SendButton = styled.button`
   font-size: 18px;
 
   cursor: pointer;
-
-  @media screen and (max-width: 400px) {
-    width: 90%;
-    margin: 20px auto;
-  }
+  ${tablet({ width: "90%", margin: "20px auto" })}
 `;
 
 const Right = styled.div`
@@ -107,8 +90,8 @@ const Right = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  @media screen and (max-width: 400px) {
-  }
+  ${tablet({ flexDirection: "row", width: "80%", margin: "30% auto" })}
+  ${mobile({ flexDirection: "column", width: "100%", margin: "auto" })}
 `;
 
 const TextWrapper = styled.div`
@@ -117,10 +100,8 @@ const TextWrapper = styled.div`
 
   display: flex;
   align-items: center;
-  @media screen and (max-width: 400px) {
-    width: 80%;
-    margin: auto;
-  }
+
+  ${tablet({ width: "80%", margin: "auto" })}
 `;
 
 const Logo = styled.img`
@@ -128,19 +109,12 @@ const Logo = styled.img`
   height: 40px;
   margin-right: 10px;
   object-fit: cover;
-  @media screen and (max-width: 400px) {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 5px;
-  }
+  ${tablet({ width: "2rem", height: "2rem", marginRight: "5px" })}
 `;
 
 const TextInfo = styled.p`
   font-size: 20px;
-  @media screen and (max-width: 400px) {
-    font-size: 0.75rem;
-    color: #a3a3a3;
-  }
+  ${tablet({ fontSize: "0.75rem", color: "#a3a3a3" })}
 `;
 
 export default function Contact() {

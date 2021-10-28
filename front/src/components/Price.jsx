@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
-import { mobile } from "responsive";
+import { tablet } from "responsive";
 const Container = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  ${mobile({ flexDirection: "column" })}
+  ${tablet({ flexDirection: "column" })}
 `;
 
 export default function Price() {

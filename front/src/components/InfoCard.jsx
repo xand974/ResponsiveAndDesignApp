@@ -11,13 +11,12 @@ const Container = styled.div`
   height: 150px;
   box-shadow: 0 0 20px #ffbfbf;
   align-items: center;
-
+  ${tablet({ width: "1fr" })}
   ${mobile({ width: "100px" })}
 `;
 
 const Image = styled.img`
   width: 30px;
-
   ${mobile({ width: "20px" })}
 `;
 

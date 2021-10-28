@@ -16,7 +16,7 @@ const CardPrice = styled.div`
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px gray;
-
+  ${tablet({ width: "90%", height: "100%", margin: "20px" })}
   ${mobile({ width: "90%", height: "200px", margin: "20px 0" })}
 `;
 
@@ -29,13 +29,13 @@ const SubscriptionText = styled.h3`
   font-size: 20px;
   font-weight: lighter;
 
-  ${mobile({ fontSize: "15px", marginBottom: "10px" })}
+  ${tablet({ fontSize: "15px", marginBottom: "10px" })}
 `;
 const NumberText = styled.span`
   font-size: 50px;
   font-weight: bold;
 
-  ${mobile({ fontSize: "30px" })}
+  ${tablet({ fontSize: "30px" })}
 `;
 
 const Button = styled.button`
@@ -50,6 +50,7 @@ const Button = styled.button`
   color: red;
   cursor: pointer;
 
+  ${tablet({ padding: "5px", marginBottom: "20px", fontSize: "12px" })}
   ${mobile({ padding: "5px", marginBottom: "10px", fontSize: "12px" })}
 `;
 const Wrapper = styled.div`
@@ -61,7 +62,7 @@ const Wrapper = styled.div`
 const Infotext = styled.p`
   font-size: 18px;
   margin-bottom: 20px;
-
+  ${tablet({ fontSize: "0.75rem", marginBottom: "10px" })}
   ${mobile({ fontSize: "13px", marginBottom: "10px" })}
 `;
 
